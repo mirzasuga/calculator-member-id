@@ -21,6 +21,9 @@ const actions = {
       state.value = '';
     state.value += e;
   },
+  clear({state}) {
+    state.value = 0;
+  },
   getResult({state, commit}) {
     const oldHistory = state.value;
     state.value = Number(eval(state.value)).toFixed(0);

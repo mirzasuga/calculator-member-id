@@ -18,7 +18,7 @@
   <!-- EXPRESIONS -->
   <div class="row">
     <div class="col wide-3">
-      <button class="btn action" @click="clear()">CLEAR</button>
+      <button class="btn action" @click="clear">CLEAR</button>
     </div>
     <BtnAddExpresion :value="'*'" :ligth="true"></BtnAddExpresion>
   </div>
@@ -77,7 +77,8 @@ export default {
   components: { BtnAddExpresion, Histories },
   methods: mapActions({
     getResult: 'calculator/getResult',
-    getPercentage: 'calculator/getPercentage'
+    getPercentage: 'calculator/getPercentage',
+    clear: 'calculator/clear'
   }),
 
   computed: {
